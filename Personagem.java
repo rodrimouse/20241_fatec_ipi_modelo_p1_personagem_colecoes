@@ -28,16 +28,14 @@ public class Personagem{
   }
 
   void cacar(){
-    if(energia >= 2){
-      System.out.printf("%s esta cacando...\n", nome);
-      energia -= 2; // energia = energia - 2;
-    }
-    else{
-      System.out.printf("%s sem energia para cacar...\n", nome);
-    }
+    System.out.printf("%s esta cacando...\n", nome);
+    energia -= 2; // energia = energia - 2;
     fome = Math.min(fome + 1, 10);
     //resolver com o ternário
     sono = sono < 10 ? sono + 1 : sono;
+    if(energia <= 0){
+      System.out.println("O personagem morreu");
+    }
   }
 
   void comer() {
