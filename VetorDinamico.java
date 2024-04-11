@@ -54,11 +54,6 @@ public class VetorDinamico {
     // System.gc();
   }
 
-  //implemente esse método
-  void adicionarSemRepeticao(String e){
-    if(!existe(e)) adicionar(e);
-  }
-
   boolean existe(String e){
     for (int i = 0; i < qtde; i++)
       if (e == elementos[i])
