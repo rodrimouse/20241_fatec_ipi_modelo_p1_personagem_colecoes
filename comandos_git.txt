@@ -31,3 +31,5 @@ git commit VetorDinamico | commit dado pelo termino da aula
 git commit Personagem | commit dado pelo termino da aula
 
 git comandos_git | commit dado pelo termino da aula
+
+git push -f | push dado pelo termino da aula
