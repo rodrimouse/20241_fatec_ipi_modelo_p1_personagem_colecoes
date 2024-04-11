@@ -1,0 +1,5 @@
+fork | copiamos o repositorio do professor para o nosso
+
+git clone https://github.com/rodrimouse/20241_fatec_ipi_modelo_p1_personagem_colecoes.git | copiamos o nosso proprio repositorio 
+
+git commit README.md
