@@ -10,3 +10,24 @@ git add comandos_git.txt | o arquivo foi de untracked para staged
 
 git commit comandos_git.txt | o arquivo foi de staged para unmodified
 
+git push -f | concertar o erro sobre a criação do arquivo README.md
+
+git commit Personagem | implementamos a morte do personagem e demos commit
+
+git tag -a v1.0.0 -m "jogo: torna a morte do personagem real" | colocar tag no arquivo
+
+git tag --list / git show v1.0.0 | checagem sobre o funcionamento das tags
+
+git push -f | demos push no arquivo do Personagem
+
+git add jogoV2 | o arquivo foi de untracked para staged
+
+git commit jogoV2 | o arquivo foi de staged para unmodified
+
+git push -f | mandamos o arquivo JogoV2 para o repositorio no github
+
+git commit VetorDinamico | commit dado pelo termino da aula
+
+git commit Personagem | commit dado pelo termino da aula
+
+git comandos_git | commit dado pelo termino da aula
