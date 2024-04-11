@@ -28,13 +28,24 @@ public class Personagem{
   }
 
   void cacar(){
+    var gerador = new Random();
     System.out.printf("%s esta cacando...\n", nome);
     energia -= 2; // energia = energia - 2;
     fome = Math.min(fome + 1, 10);
     //resolver com o ternário
     sono = sono < 10 ? sono + 1 : sono;
+    int oQueCacar = gerador.nextInt(6);
+    inventario(oQueCacar);
+
     if(energia <= 0){
       System.out.println("O personagem morreu");
+    }
+  }
+
+  void inventario(int x) {
+    switch(x){
+      case 1:
+        adicionar("Batata Frita");
     }
   }
 
