@@ -66,10 +66,11 @@ public class VetorDinamico {
   }
 
   void removerNoFinal(){
-
+    
   }
 
   boolean estaVazio(){
+    return qtde != 0 ? true : false;
 
   }
 
@@ -88,12 +89,17 @@ public class VetorDinamico {
 
   public String toString(){
     StringBuilder sb = new StringBuilder("");
-    sb.append("Qtde: ").append(qtde);
+    sb.append("\nQtde: ").append(qtde);
     sb.append("\n");
     sb.append("Cap: ").append(cap);
     sb.append(qtde > 0 ? "\nElementos: " : "");
     for (int i = 0; i < qtde; i++){
-      sb.append(elementos[i]).append(" ");
+      if(i== 0){
+        sb.append(elementos[i]);
+      }
+      else{
+      sb.append(", ").append(elementos[i]);
+      }
     }
     return sb.toString();
   }
