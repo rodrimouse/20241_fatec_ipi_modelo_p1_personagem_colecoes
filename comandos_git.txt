@@ -33,3 +33,25 @@ git commit Personagem | commit dado pelo termino da aula
 git comandos_git | commit dado pelo termino da aula
 
 git push -f | push dado pelo termino da aula
+
+git init | inicio do git em outro computador 
+
+git clone https://github.com/rodrimouse/20241_fatec_ipi_modelo_p1_personagem_colecoes.git | clonar o repositório git em outra máquina
+
+git commit Personagem.java | implementamos o inventário do personagem e aleatoriedade na geração de itens
+
+git commit VetorDinamico.java | mudamos o toString para mostrar o inventário da maneira correta
+
+git push | push dado para salvar progresso 
+
+git commit Personagem.java | condiciona refeição a existencia de itens
+
+git commit VetorDinamico.java | implementamos o método removerNoFinal
+
+git push -f | push dado para salvar progresso
+
+git commit JogoV2.java | implementação básica do personagem 2
+
+git commit comandos_git.txt | salvar os comandos usados nesse dia
+
+git push -f | push dado para encerrar o dia
