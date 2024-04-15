@@ -2,32 +2,36 @@ import java.util.Random;
 public class JogoV2 {
   public static void main(String[] args) throws Exception{
     var p = new Personagem();
+    var p2 = new Personagem();
     //exercicio: adicione um personagem que come demais
     var gerador = new Random();
     p.nome = "Gamal";
-    // p2.sono = 10;
-    // p2.energia = 1;
-    // p2.fome = 2;
-    // p3.sono = 4;
-    // p3.fome = 10;
-    // p3.energia = 2;
+    p2.nome = "Dersin2k";
     
-    while(p.energia > 0){
-      int oQueFazer = gerador.nextInt(1);
+    while(p.energia > 0 || p2.energia >0){
+      int oQueFazer = gerador.nextInt(2);
       switch(oQueFazer){
         default:
-          p.cacar();
+          if(p.energia > 0){
+            p.cacar();}
+            else{
+              System.out.printf("%s está morto\n",p.nome);
+            }
+          p2.cacar();
           break;
-        // case 1:
-        //   p.comer();
-        //   break;
+        case 1:
+          // p.comer();
+          p2.comer();
+          break;
         // case 2:
         //   p.dormir();
         //   break;
       }
       System.out.println(p);
       System.out.println("**************************");
-      Thread.sleep(2000);
+      System.out.println(p2);
+      System.out.println("**************************");
+      Thread.sleep(5000);
     }
   }
   // srand(time(NULL))
