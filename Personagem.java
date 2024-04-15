@@ -6,14 +6,22 @@ public class Personagem{
   int energia;
   private int fome;
   private int sono;
+  private VetorDinamico inventario;
 
   //esse é o construtor padrão
   //criado automaticamente pelo compilador, ainda que não seja escrito explicitamente
   Personagem(){
+    
     nome = null;
     energia = 10;
     fome = 0;
     sono = 0;
+    inventario = new VetorDinamico();
+    Random gerador = new Random();
+        for (int i = 0; i < 4; i++) {
+            int oQueAdicionar = gerador.nextInt(6);
+            inventario.adicionar(pegarItemAleatorio(oQueAdicionar));
+        }
   }
 
   //construtor personalizado
@@ -34,20 +42,29 @@ public class Personagem{
     fome = Math.min(fome + 1, 10);
     //resolver com o ternário
     sono = sono < 10 ? sono + 1 : sono;
-    int oQueCacar = gerador.nextInt(6);
-    inventario(oQueCacar);
+    int oQueCacar = gerador.nextInt(5);
+    inventario.adicionar(pegarItemAleatorio(oQueCacar));
+    
 
     if(energia <= 0){
       System.out.println("O personagem morreu");
     }
   }
 
-  void inventario(int x) {
-    switch(x){
-      case 1:
-        adicionar("Batata Frita");
+  private String pegarItemAleatorio(int sorteado) {
+    switch (sorteado) {
+        default:
+            return "Javali selvagem";
+        case 1:
+            return "Amora";
+        case 2:
+            return "Batata frita";
+        case 3:
+            return "Cogumelo mágico";
+        case 4:
+            return "Duende";
     }
-  }
+}
 
   void comer() {
     //se tiver fome
@@ -79,8 +96,8 @@ public class Personagem{
 
   public String toString(){
     return String.format(
-      "%s: (e:%d, f:%d, s:%d)",
-      nome, energia, fome, sono
+      "%s: (e:%d, f:%d, s:%d), Inventário: %s",
+      nome, energia, fome, sono, inventario
     );
   }
 }
