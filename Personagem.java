@@ -72,15 +72,18 @@ public class Personagem{
       //aumentar o valor de energia de 1
     //caso contrario
       //so vai avisar que esta sem fome
-      switch(fome){
-        case 0:
-          System.out.printf("%s sem fome....\n", nome);
-          break;
-        default:
-          System.out.printf("%s comendo...\n", nome);
-          --fome;
-          energia = (energia == 10 ? energia : energia + 1);
-      }
+      if (fome > 0) {
+        if (inventario.tamanho() > 0) {
+            inventario.removerNoFinal();
+            System.out.printf("%s está comendo...\n", nome);
+            fome--;
+            energia = Math.min(10, energia + 1);
+        } else {
+            System.out.printf("%s não tem itens para comer...\n", nome);
+        }
+    } else {
+        System.out.printf("%s não está com fome...\n", nome);
+    }
   }
 
   void dormir(){
