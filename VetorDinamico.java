@@ -66,7 +66,7 @@ public class VetorDinamico {
   }
 
   void removerNoFinal(){
-    
+    qtde = qtde -1;
   }
 
   boolean estaVazio(){
