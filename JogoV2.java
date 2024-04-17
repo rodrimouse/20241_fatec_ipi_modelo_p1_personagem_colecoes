@@ -11,6 +11,15 @@ public class JogoV2 {
     p2.nome = "Dersin2k";
     
     while(p.energia > 0 || p2.energia > 0){
+      int brigaDeGalo = gerador.nextInt(2);
+      if(brigaDeGalo == 0 && p.energia >0 && p2.energia >0){
+          p.energia--;
+          System.out.printf("\n%s bateu mais forte!\n",p2.nome);
+      }
+      else if(brigaDeGalo == 1 && p2.energia >0 && p.energia >0){
+          p2.energia--;
+          System.out.printf("\n%s Bateu mais forte!\n", p.nome);
+      }
       
       p.jogar(p);
       p2.jogar(p2);
