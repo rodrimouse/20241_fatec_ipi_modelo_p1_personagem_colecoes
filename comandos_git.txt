@@ -55,3 +55,21 @@ git commit JogoV2.java | implementação básica do personagem 2
 git commit comandos_git.txt | salvar os comandos usados nesse dia
 
 git push -f | push dado para encerrar o dia
+
+git init | inicio do terceiro dia
+
+git commit JogoV2.java | teste de dois personagens
+
+git commit Personagem.java | adiciona segundo personagem
+
+git commit JogoV2.java | correção para maior eficiencia do while
+
+git commit Personagem.java | personagens não revivem mais
+
+git commit JogoV2.java | testa batalha entre dois personagens
+
+git commit Personagem.java | implementação de batalha entre dois personagens
+
+git commit comandos_git.txt | salvar os comandos usados nesse dia
+
+git push -f | push dado para encerrar o dia
