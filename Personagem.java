@@ -119,7 +119,7 @@ public class Personagem{
   }
 
   boolean vivo(Personagem p){
-    if(p.energia !=0){
+    if(p.energia > 0){
       return true;
     }
     else{
