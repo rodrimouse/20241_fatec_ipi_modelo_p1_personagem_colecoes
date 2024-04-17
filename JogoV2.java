@@ -10,16 +10,19 @@ public class JogoV2 {
     p.nome = "Gamal";
     p2.nome = "Dersin2k";
     
-    while(true){
-
+    while(p.energia > 0 || p2.energia > 0){
+      
       p.jogar(p);
       p2.jogar(p2);
-     
-      System.out.println(p);
-      System.out.println("**************************");
-      System.out.println(p2);
-      System.out.println("**************************");
-      Thread.sleep(5000);
+      if(p.energia > 0){
+        System.out.println(p);
+        System.out.println("**************************");
+      }
+      if(p2.energia > 0){
+        System.out.println(p2);
+        System.out.println("**************************");
+      }
+      Thread.sleep(1000);
     }
   }
   
