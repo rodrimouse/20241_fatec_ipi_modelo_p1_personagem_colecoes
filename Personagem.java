@@ -99,21 +99,33 @@ public class Personagem{
 
   void jogar(Personagem p){
     var gerador = new Random();
-      int oQueFazer = gerador.nextInt(2);
-      switch(oQueFazer){
-        default:
-          p.cacar();
-          break;
-        case 1:
-          p.comer();
-          break;
-        case 2:
-          p.dormir();
-          break;
+    if(vivo(p)){
+    int oQueFazer = gerador.nextInt(3);
+    switch(oQueFazer){
+      default:
+        p.cacar();
+        break;
+      case 1:
+        p.comer();
+        break;
+      case 2:
+        p.dormir();
+        break;
       }
+    }
+    else{
+      System.out.printf("%s está morto...\n", p.nome);
+    }
   }
 
-  
+  boolean vivo(Personagem p){
+    if(p.energia !=0){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
   public String toString(){
     return String.format(
       "%s: (e:%d, f:%d, s:%d), Inventário: %s",
