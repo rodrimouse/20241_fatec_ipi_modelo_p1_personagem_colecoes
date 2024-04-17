@@ -72,4 +72,12 @@ git commit Personagem.java | implementação de batalha entre dois personagens
 
 git commit comandos_git.txt | salvar os comandos usados nesse dia
 
+git tag -a v2.0.0 -m "implementa sobrevivencia heroica mas, no final, todos morrem" | implementação da ultima tag sinalizando o final do projeto
+
+git push origin v1.0.0 | subir a tag v1.0.0 pro github
+
+git push origin v2.0.0 | subir a tag v2.0.0 pro github
+
+git commit comandos_git.txt | salvar os comandos usados nesse dia
+
 git push -f | push dado para encerrar o dia
