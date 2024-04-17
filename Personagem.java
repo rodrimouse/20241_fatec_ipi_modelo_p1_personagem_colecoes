@@ -97,6 +97,23 @@ public class Personagem{
     }
   }
 
+  void jogar(Personagem p){
+    var gerador = new Random();
+      int oQueFazer = gerador.nextInt(2);
+      switch(oQueFazer){
+        default:
+          p.cacar();
+          break;
+        case 1:
+          p.comer();
+          break;
+        case 2:
+          p.dormir();
+          break;
+      }
+  }
+
+  
   public String toString(){
     return String.format(
       "%s: (e:%d, f:%d, s:%d), Inventário: %s",
